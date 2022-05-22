@@ -1,0 +1,2 @@
+sections : home,about me,services,portfolio,price,review ,contact
+Feature : 1) preloader 2) Dark light 3) smooth scroll 4) top to bottom 5)cv download 6) email sanding 

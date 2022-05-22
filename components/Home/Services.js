@@ -1,0 +1,65 @@
+import React from "react";
+import Heading from "../UI/Heading";
+
+import ServiceCard from "../UI/ServiceCard";
+const Services = () => {
+  return (
+    <div className="bg-gray-200 mt-20 pt-10">
+      <Heading ft="MY" st="services" />
+      <div className="grid mt-16 md:mt-20 lg:mt-28 pb-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-[90%] md:w-[85%] lg:w-[80%] mx-auto gap-8">
+        <ServiceCard
+          sImage="/images/atom.png"
+          cText="Website"
+          details="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, rerum aliquid! Eius illo laudantium earum quae tempora autem cupiditate quaerat quo nam iste, neque harum aperiam facere similique provident voluptas."
+          nText="React"
+          num="01"
+        />
+        <ServiceCard
+          sImage="/images/nextjs.png"
+          cText="Website"
+          details="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, rerum aliquid! Eius illo laudantium earum quae tempora autem cupiditate quaerat quo nam iste, neque harum aperiam facere similique provident voluptas."
+          nText="Next Js"
+          color="yellow"
+          num="02"
+          mt
+        />
+        <ServiceCard
+          sImage="/images/sass.png"
+          cText="Page"
+          details="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, rerum aliquid! Eius illo laudantium earum quae tempora autem cupiditate quaerat quo nam iste, neque harum aperiam facere similique provident voluptas."
+          nText="Landing"
+          num="03"
+        />
+        <ServiceCard
+          sImage="/images/html.png"
+          cText="Fixing"
+          details="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, rerum aliquid! Eius illo laudantium earum quae tempora autem cupiditate quaerat quo nam iste, neque harum aperiam facere similique provident voluptas."
+          nText="BUG"
+          num="04"
+        />
+        <ServiceCard
+          sImage="/images/js.png"
+          cText="Website"
+          details="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, rerum aliquid! Eius illo laudantium earum quae tempora autem cupiditate quaerat quo nam iste, neque harum aperiam facere similique provident voluptas."
+          nText="Custom"
+          num="05"
+          mt
+        />
+        <ServiceCard
+          sImage="/images/tailwind-css.png"
+          cText="Website"
+          details="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, rerum aliquid! Eius illo laudantium earum quae tempora autem cupiditate quaerat quo nam iste, neque harum aperiam facere similique provident voluptas."
+          nText="Tailwind"
+          num="06"
+        />
+      </div>
+      <div className="text-center mt-10 pb-12">
+        <button className="btn px-12 font-bold  py-3 rounded-full text-white bg-teal-700">
+          View All
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default Services;
