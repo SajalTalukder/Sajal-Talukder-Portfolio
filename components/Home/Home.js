@@ -1,6 +1,7 @@
 import React from "react";
 import About from "./About";
 import Blog from "./Blog";
+import Contact from "./Contact";
 import Header from "./Header";
 import Portfolio from "./Portfolio";
 import Price from "./Price";
@@ -17,6 +18,7 @@ const Home = () => {
       <Price />
       <Review />
       <Blog />
+      <Contact />
     </div>
   );
 };

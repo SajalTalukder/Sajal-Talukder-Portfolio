@@ -7,7 +7,7 @@ const Blog = () => {
       <div className="pt-10">
         <Heading ft="My" st="Blog" />
       </div>
-      <div className="grid  mt-16 grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 w-[90%] md:w-[85%] lg:w-[80%] mx-auto">
+      <div className="grid pb-10 mt-16 grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 w-[90%] md:w-[85%] lg:w-[80%] mx-auto">
         <BlogBox
           imgSrc="/images/2.png"
           title="How to Build Responsive React Website"
