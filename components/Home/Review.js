@@ -25,7 +25,7 @@ const Review = () => {
   return (
     <div className="mt-12 mb-12">
       <Heading ft="Client" st="Review" />
-      <div className="mt-16 w-[70%] mx-auto">
+      <div className="mt-8 md:mt-16 w-[90%] md:w-[85%] lg:w-[80%] mx-auto">
         <Carousel
           swipeable={false}
           draggable={false}

@@ -9,10 +9,14 @@ const HomePage = () => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 0);
+    }, 3000);
   }, []);
 
-  return <div className="font-lato">{loading ? <Loader /> : <Home />}</div>;
+  return (
+    <>
+      <div className="font-lato">{loading ? <Loader /> : <Home />}</div>
+    </>
+  );
 };
 
 export default HomePage;

@@ -6,7 +6,7 @@ const Price = () => {
   return (
     <div className="bg-gray-200  pt-10">
       <Heading ft="My" st="price" />
-      <div className="grid mt-24 grid-cols-1 pb-20 md:grid-cols-2 lg:grid-cols-3 w-[90%] lg:w-[80%] mx-auto">
+      <div className="grid  gap-6 lg:gap-0 mt-10 md:mt-20 lg:mt-24 grid-cols-1 pb-20 md:grid-cols-2 lg:grid-cols-3 w-[90%] lg:w-[80%] mx-auto">
         <Table
           type="Basic"
           price="20$"

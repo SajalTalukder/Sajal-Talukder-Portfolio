@@ -3,11 +3,11 @@ import Heading from "../UI/Heading";
 import BlogBox from "../UI/BlogBox";
 const Blog = () => {
   return (
-    <div className="mt-32 bg-gray-300 pb-10">
+    <div className="mt-20 md:mt-28 lg:mt-32 bg-gray-300 pb-10">
       <div className="pt-10">
         <Heading ft="My" st="Blog" />
       </div>
-      <div className="grid pb-10 mt-16 grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 w-[90%] md:w-[85%] lg:w-[80%] mx-auto">
+      <div className="grid pb-10 mt-8 md:mt-12 lg:mt-16 grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 w-[90%] md:w-[85%] lg:w-[80%] mx-auto">
         <BlogBox
           imgSrc="/images/2.png"
           title="How to Build Responsive React Website"
