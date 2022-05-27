@@ -7,7 +7,7 @@ import Skills from "../UI/Skills";
 
 const About = () => {
   return (
-    <div className=" -mt-20 -z-50 ">
+    <div className=" -mt-20 -z-50 " id="about">
       <div className="w-[80%] mx-auto  pt-16  lg:pt-32 ">
         <Heading ft="About" st="ME" />
       </div>

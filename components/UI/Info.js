@@ -13,8 +13,10 @@ const Info = () => {
             First Name :<span className="text-gray-900 font-bold"> Sajal</span>
           </p>
           <p className="text-gray-800 font-semibold">
-            Age : <span className="text-gray-900 font-bold">21 Years</span>
+            Last Name :
+            <span className="text-gray-900 font-bold"> Talukder</span>
           </p>
+
           <p className="text-gray-800 font-semibold">
             Freelance :
             <span className="text-gray-900 font-bold"> Available</span>
@@ -30,8 +32,7 @@ const Info = () => {
         </div>
         <div className="space-y-6">
           <p className="text-gray-800 font-semibold">
-            Last Name :
-            <span className="text-gray-900 font-bold"> Talukder</span>
+            Age : <span className="text-gray-900 font-bold">21 Years</span>
           </p>
           <p className="text-gray-800 font-semibold">
             Nationality :{" "}

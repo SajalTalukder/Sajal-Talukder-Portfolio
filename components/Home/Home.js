@@ -1,4 +1,5 @@
 import React from "react";
+import TopUp from "../UI/TopUp";
 import About from "./About";
 import Blog from "./Blog";
 import Contact from "./Contact";
@@ -11,7 +12,7 @@ import Services from "./Services";
 
 const Home = () => {
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-x-hidden" id="home">
       <Header />
       <About />
       <Services />
@@ -21,6 +22,7 @@ const Home = () => {
       <Blog />
       <Contact />
       <Footer />
+      <TopUp />
     </div>
   );
 };

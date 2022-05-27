@@ -4,7 +4,7 @@ const Table = ({ type, price, s1, s2, s3, s4, s5, scale, bg }) => {
   return (
     <div
       className={`bg-white ${
-        scale ? "lg:scale-110 z-50" : "lg:scale-100 z-0"
+        scale ? "lg:scale-110 z-[500]" : "lg:scale-100 z-0"
       } overflow-hidden transform rounded-lg shadow-lg shadow-gray-400`}
     >
       <div className={`${bg}`}>

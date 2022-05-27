@@ -3,11 +3,10 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import projects from "../../data/data";
 import Image from "next/image";
-import { useRouter } from "next/router";
+
 import Link from "next/link";
 import Heading from "../UI/Heading";
 const Portfolio = () => {
-  const router = useRouter();
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -26,7 +25,7 @@ const Portfolio = () => {
     },
   };
   return (
-    <div className="mt-10">
+    <div className="mt-10" id="portfolio">
       <Heading ft="MY" st=" Portfolio" />
       <div className="mb-16">
         <Carousel
@@ -42,7 +41,10 @@ const Portfolio = () => {
         >
           {projects.map((project) => {
             return (
-              <div className="relative hover:scale-110 transform transition-all duration-300 shadow-gray-600 space-x-6 ml-5 mr-5">
+              <div
+                key={project.id}
+                className="relative hover:scale-110 transform transition-all duration-300 shadow-gray-600 space-x-6 ml-5 mr-5"
+              >
                 <Link href={project.live}>
                   <a target="_blank">
                     <Image

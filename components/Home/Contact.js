@@ -8,7 +8,7 @@ import {
 } from "@heroicons/react/solid";
 const Contact = () => {
   return (
-    <div className="mt-12">
+    <div className="mt-12" id="contact">
       <Heading ft="Contact" st="ME" />
       <div className="grid items-center mt-16 mb-10 grid-cols-1 md:grid-cols-3 w-[90%] md:w-[85%] lg:w-[80%] mx-auto gap-8">
         <div className="col-span-1  space-y-6">

@@ -4,7 +4,11 @@ import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 const Skills = () => {
   return (
-    <div className="grid grid-cols-2 mt-16 md:grid-cols-3 gap-[4rem] lg:grid-cols-4 w-[95%] md:w-[90%] lg:w-[80%] mx-auto text-center">
+    <div
+      className="grid  grid-cols-2 mt-16 md:grid-cols-3 gap-[4rem] lg:grid-cols-4 w-[95%] md:w-[90%] lg:w-[80%] mx-auto text-center"
+      data-aos="zoom-in"
+      data-aos-delay="300"
+    >
       <div className="mx-auto">
         <div className="w-[80px] h-[80px] sm:w-[150px] sm:h-[150px]">
           <CircularProgressbar
