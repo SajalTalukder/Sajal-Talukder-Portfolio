@@ -25,7 +25,7 @@
       rgba(255, 255, 255, 0.863),
       rgba(255, 255, 255, 0.37)
     ),
-    url("/images/bglight.jpg");
+    url("/images/bglight2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -129,4 +129,8 @@
     rgba(16, 66, 157, 1) 100.2%,
     rgba(187, 187, 187, 1) 100.2%
   );
+}
+
+.react-multiple-carousel__arrow {
+  z-index: 100 !important;
 }

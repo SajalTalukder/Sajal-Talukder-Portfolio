@@ -4,7 +4,14 @@ import { Link } from "react-scroll";
 
 const Nav = () => {
   const [navSticky, setNavSticky] = useState(false);
+  const [showNav, setShowNav] = useState(false);
 
+  const showNavHandler = () => {
+    setShowNav(true);
+  };
+  const hideNavHandler = () => {
+    setShowNav(false);
+  };
   useEffect(() => {
     const handler = () => {
       if (window.scrollY >= 100) {
@@ -30,11 +37,13 @@ const Nav = () => {
       >
         SA<span className="text-yellow-600">JA</span>L
       </div>
-      <div className="hidden lg:inline-block">
+      <div className="lg:inline-block">
         <ul
-          className={`flex items-center ${
-            navSticky ? "text-white" : "text-black"
-          } lg:space-x-8 xl:space-x-16 text-md transition-all duration-200 font-bold uppercase justify-between`}
+          className={`lg:flex lg:flex-row items-center ${
+            navSticky ? "lg:text-white" : "lg:text-black"
+          } lg:space-x-8 xl:space-x-16  ${
+            showNav ? "translate-x-0" : "translate-x-full"
+          } lg:translate-x-0 text-center text-white z-[1001] space-y-16 lg:space-y-0 pt-16 lg:pt-0 fixed lg:relative lg:bg-transparent top-0 left-0 right-0 bottom-0 bg-blue-800 lg:text-md transition-all duration-400 font-bold uppercase lg:justify-between`}
         >
           <li className="cursor-pointer hover:text-yellow-500 transition duration-200">
             <Link
@@ -42,8 +51,8 @@ const Nav = () => {
               to="home"
               spy={true}
               smooth={true}
-              offset={50}
               duration={500}
+              onClick={hideNavHandler}
             >
               Home
             </Link>
@@ -54,8 +63,8 @@ const Nav = () => {
               to="about"
               spy={true}
               smooth={true}
-              offset={50}
               duration={500}
+              onClick={hideNavHandler}
             >
               ABOUT
             </Link>
@@ -66,8 +75,8 @@ const Nav = () => {
               to="service"
               spy={true}
               smooth={true}
-              offset={50}
               duration={500}
+              onClick={hideNavHandler}
             >
               Services
             </Link>
@@ -78,8 +87,8 @@ const Nav = () => {
               to="portfolio"
               spy={true}
               smooth={true}
-              offset={50}
               duration={500}
+              onClick={hideNavHandler}
             >
               portfolio
             </Link>
@@ -90,8 +99,8 @@ const Nav = () => {
               to="price"
               spy={true}
               smooth={true}
-              offset={50}
               duration={500}
+              onClick={hideNavHandler}
             >
               price
             </Link>
@@ -102,8 +111,8 @@ const Nav = () => {
               to="review"
               spy={true}
               smooth={true}
-              offset={50}
               duration={500}
+              onClick={hideNavHandler}
             >
               review
             </Link>
@@ -114,8 +123,8 @@ const Nav = () => {
               to="blog"
               spy={true}
               smooth={true}
-              offset={50}
               duration={500}
+              onClick={hideNavHandler}
             >
               blog
             </Link>
@@ -126,8 +135,8 @@ const Nav = () => {
               to="contact"
               spy={true}
               smooth={true}
-              offset={50}
               duration={500}
+              onClick={hideNavHandler}
             >
               contact
             </Link>
@@ -136,7 +145,20 @@ const Nav = () => {
       </div>
       <div className="flex items-center  mr-[2rem] sm:mr-[4rem] lg:mr-0 space-x-6">
         <SunIcon className="w-10 h-10 text-yellow-600 lg:mr-[4rem]" />
-        <MenuAlt3Icon className="w-10 h-10  lg:hidden text-yellow-600 ml-[1rem] mr-[1rem] sm:mr[2rem] md:mr-[4rem]" />
+        {!showNav && (
+          <MenuAlt3Icon
+            onClick={showNavHandler}
+            className="w-10 h-10  lg:hidden text-yellow-600 ml-[1rem] mr-[1rem] sm:mr[2rem] md:mr-[4rem]"
+          />
+        )}
+        {showNav && (
+          <p
+            onClick={hideNavHandler}
+            className="font-bold text-[2rem] text-white z-[100000]"
+          >
+            X
+          </p>
+        )}
       </div>
     </div>
   );
