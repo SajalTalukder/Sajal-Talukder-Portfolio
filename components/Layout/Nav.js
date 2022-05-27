@@ -43,7 +43,7 @@ const Nav = () => {
             navSticky ? "lg:text-white" : "lg:text-black"
           } lg:space-x-8 xl:space-x-16  ${
             showNav ? "translate-x-0" : "translate-x-full"
-          } lg:translate-x-0 text-center text-white z-[1001] space-y-16 lg:space-y-0 pt-16 lg:pt-0 fixed lg:relative lg:bg-transparent top-0 left-0 right-0 bottom-0 bg-blue-800 lg:text-md transition-all duration-400 font-bold uppercase lg:justify-between`}
+          } lg:translate-x-0 text-center text-white z-[1001]  space-y-12 lg:space-y-0 pt-16 lg:pt-0 fixed lg:relative lg:bg-transparent top-0 left-0 right-0 bottom-0 w-[100%] h-[100%] bg-blue-800 lg:text-md transition-all duration-400 font-bold uppercase lg:justify-between`}
         >
           <li className="cursor-pointer hover:text-yellow-500 transition duration-200">
             <Link
@@ -148,13 +148,13 @@ const Nav = () => {
         {!showNav && (
           <MenuAlt3Icon
             onClick={showNavHandler}
-            className="w-10 h-10  lg:hidden text-yellow-600 ml-[1rem] mr-[1rem] sm:mr[2rem] md:mr-[4rem]"
+            className="w-10 h-10 cursor-pointer  lg:hidden text-yellow-600 ml-[1rem] mr-[1rem] sm:mr[2rem] md:mr-[4rem]"
           />
         )}
         {showNav && (
           <p
             onClick={hideNavHandler}
-            className="font-bold text-[2rem] text-white z-[100000]"
+            className="font-bold text-[2rem] cursor-pointer text-white z-[100000]"
           >
             X
           </p>
