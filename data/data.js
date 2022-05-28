@@ -48,7 +48,7 @@ Next JS. Users can visit the individual product details page. Users can add the 
     details: `Airbnb clone is a simple version of actual airbnb website with a beautiful user interface made with 
 Next JS. Users can search with beautiful calender.Authentication is implemented using next auth . Google auth is used .  
 `,
-    live: "https://airbnb-clone-git-main-sajaltalukder.vercel.app/",
+    live: "https://sajaltraveler.vercel.app/",
     github: "https://github.com/SajalTalukder/waterbnb-clone/",
   },
   {
