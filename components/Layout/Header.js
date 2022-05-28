@@ -1,5 +1,5 @@
 import React from "react";
-import Nav from "../Layout/Nav";
+import Nav from "./Nav";
 import Image from "next/image";
 import { CheckCircleIcon, DownloadIcon } from "@heroicons/react/solid";
 import TypeWrite from "../Utils/TypeWrite";

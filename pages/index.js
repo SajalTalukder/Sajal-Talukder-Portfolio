@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Home from "../components/Home/Home";
+import Home from "../components/Layout/Home";
 import Loader from "../components/UI/Loading";
 import AOS from "aos";
 import "aos/dist/aos.css";
