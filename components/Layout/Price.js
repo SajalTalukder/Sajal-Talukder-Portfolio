@@ -1,10 +1,13 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import Heading from "../UI/Heading";
 
 import Table from "../UI/Table";
 const Price = () => {
+  const isDark = useSelector((state) => state.theme.isDark);
+  const bg = isDark ? "bg-black" : "bg-gray-200";
   return (
-    <div className="bg-gray-200  pt-10" id="price">
+    <div className={`${bg}  pt-10`} id="price">
       <Heading ft="My" st="price" />
       <div className="grid  gap-6 lg:gap-0 mt-10 md:mt-20 lg:mt-24 grid-cols-1 pb-20 md:grid-cols-2 lg:grid-cols-3 w-[90%] lg:w-[80%] mx-auto">
         <div data-aos="fade-right" data-aos-delay="300">

@@ -2,7 +2,10 @@ import React from "react";
 
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
+import { useSelector } from "react-redux";
 const Skills = () => {
+  const isDark = useSelector((state) => state.theme.isDark);
+  const textColor = isDark ? "text-white" : "text-gray-800";
   return (
     <div
       className="grid  grid-cols-2 mt-16 md:grid-cols-3 gap-[4rem] lg:grid-cols-4 w-[95%] md:w-[90%] lg:w-[80%] mx-auto text-center"
@@ -18,7 +21,7 @@ const Skills = () => {
             value={90}
             text="90%"
           />
-          <p className="text-center font-bold text-lg text-gray-800 mt-3">
+          <p className={`text-center font-bold text-lg ${textColor} mt-3 `}>
             HTML
           </p>
         </div>
@@ -33,7 +36,7 @@ const Skills = () => {
             value={86}
             text="86%"
           />
-          <p className="text-center font-bold text-lg text-gray-800 mt-3">
+          <p className={`text-center font-bold text-lg ${textColor} mt-3 `}>
             CSS
           </p>
         </div>
@@ -47,7 +50,7 @@ const Skills = () => {
             value={75}
             text="75%"
           />
-          <p className="text-center font-bold text-lg text-gray-800 mt-3">
+          <p className={`text-center font-bold text-lg ${textColor} mt-3 `}>
             JAVASCRIPT
           </p>
         </div>
@@ -61,7 +64,7 @@ const Skills = () => {
             value={85}
             text="85%"
           />
-          <p className="text-center font-bold text-lg text-gray-800 mt-3">
+          <p className={`text-center font-bold text-lg ${textColor} mt-3 `}>
             REACT
           </p>
         </div>
@@ -75,7 +78,7 @@ const Skills = () => {
             value={80}
             text="80%"
           />
-          <p className="text-center font-bold text-lg text-gray-800 mt-3">
+          <p className={`text-center font-bold text-lg ${textColor} mt-3 `}>
             NEXT JS
           </p>
         </div>
@@ -89,7 +92,7 @@ const Skills = () => {
             value={90}
             text="90%"
           />
-          <p className="text-center font-bold text-lg text-gray-800 mt-3">
+          <p className={`text-center font-bold text-lg ${textColor} mt-3 `}>
             SASS
           </p>
         </div>
@@ -103,7 +106,7 @@ const Skills = () => {
             value={87}
             text="87%"
           />
-          <p className="text-center font-bold text-lg text-gray-800 mt-3">
+          <p className={`text-center font-bold text-lg ${textColor} mt-3 `}>
             TAILWIND CSS
           </p>
         </div>
@@ -117,7 +120,7 @@ const Skills = () => {
             value={60}
             text="60%"
           />
-          <p className="text-center font-bold text-lg text-gray-800 mt-3">
+          <p className={`text-center font-bold text-lg ${textColor} mt-3 `}>
             FIREBASE
           </p>
         </div>

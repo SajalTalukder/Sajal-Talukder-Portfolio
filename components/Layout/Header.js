@@ -3,15 +3,19 @@ import Nav from "./Nav";
 import Image from "next/image";
 import { CheckCircleIcon, DownloadIcon } from "@heroicons/react/solid";
 import TypeWrite from "../Utils/TypeWrite";
+import { useSelector } from "react-redux";
 const Header = () => {
+  const isDark = useSelector((state) => state.theme.isDark);
+  const bg = isDark ? "bg-dark" : "bg-1";
+  const textColor = isDark ? "text-white" : "text-black";
   return (
     <>
       <Nav />
-      <div className="bg-1 w-[100vw] h-[100vh] ">
+      <div className={`${bg} w-[100vw] h-[100vh]`}>
         <div className="grid items-center grid-cols1 md:grid-cols-2 gap-4 h-[85%] w-[80%] mx-auto">
           <div className="text-white">
             <h1 className="font-extrabold text-[2rem] md:text-[3rem] text-yellow-600 uppercase">
-              I'M <span className="text-black">sajal</span>
+              I'M <span className={`${textColor}`}>sajal</span>
             </h1>
             <h1 className="font-extrabold text-[1.6rem] text-green-600 md:text-[1.8rem] lg:text-[2.5rem] uppercase">
               <TypeWrite />

@@ -6,7 +6,10 @@ import Image from "next/image";
 
 import Link from "next/link";
 import Heading from "../UI/Heading";
+import { useSelector } from "react-redux";
 const Portfolio = () => {
+  const isDark = useSelector((state) => state.theme.isDark);
+  const bg = isDark ? "bg-black" : "bg-white";
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -25,9 +28,9 @@ const Portfolio = () => {
     },
   };
   return (
-    <div className="mt-10" id="portfolio">
+    <div className={`${bg} pt-16`} id="portfolio">
       <Heading ft="MY" st=" Portfolio" />
-      <div className="mb-16">
+      <div className="pb-16">
         <Carousel
           swipeable={false}
           draggable={false}
@@ -41,23 +44,24 @@ const Portfolio = () => {
         >
           {projects.map((project) => {
             return (
-              <div
-                key={project.id}
-                className="relative hover:scale-110 transform transition-all duration-300 shadow-gray-600 space-x-6 ml-5 mr-5"
-              >
-                <Link href={project.live}>
-                  <a target="_blank">
-                    <Image
-                      src={project.heroImage}
-                      objectFit="contain"
-                      alt={project.name}
-                      width={800}
-                      height={800}
-                      className="cursor-pointer transform transition duration-400"
-                    />
-                  </a>
-                </Link>
-              </div>
+              <>
+                <div
+                  key={project.id}
+                  className=" relative  hover:scale-110 mt-10 p-3 transform transition-all duration-300 shadow-gray-600 space-x-6 ml-5 mr-5"
+                >
+                  <Link href={project.live}>
+                    <a target="_blank">
+                      <Image
+                        src={project.heroImage}
+                        alt={project.name}
+                        width={1000}
+                        height={600}
+                        className="cursor-pointer transform  transition duration-400"
+                      />
+                    </a>
+                  </Link>
+                </div>
+              </>
             );
           })}
         </Carousel>

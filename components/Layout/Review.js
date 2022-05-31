@@ -4,7 +4,11 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
 import ReviewBox from "../UI/ReviewBox";
+import { useSelector } from "react-redux";
+
 const Review = () => {
+  const isDark = useSelector((state) => state.theme.isDark);
+  const bg = isDark ? "bg-black" : "bg-white";
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -23,7 +27,7 @@ const Review = () => {
     },
   };
   return (
-    <div className="mt-12 mb-12" id="review">
+    <div className={`${bg} pt-12 pb-12`} id="review">
       <Heading ft="Client" st="Review" />
       <div className="mt-8 md:mt-16 w-[90%] md:w-[85%] lg:w-[80%] mx-auto">
         <Carousel

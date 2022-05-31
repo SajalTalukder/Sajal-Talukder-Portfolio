@@ -1,9 +1,12 @@
 import React from "react";
 import Heading from "../UI/Heading";
 import BlogBox from "../UI/BlogBox";
+import { useSelector } from "react-redux";
 const Blog = () => {
+  const isDark = useSelector((state) => state.theme.isDark);
+  const bg = isDark ? "bg-black" : "bg-gray-300";
   return (
-    <div className="mt-20 md:mt-28 lg:mt-32 bg-gray-300 pb-10" id="blog">
+    <div className={`pt-20 md:mt-28 ${bg} lg:mt-32  pb-10`} id="blog">
       <div className="pt-10">
         <Heading ft="My" st="Blog" />
       </div>

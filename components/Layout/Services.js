@@ -1,10 +1,13 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import Heading from "../UI/Heading";
 
 import ServiceCard from "../UI/ServiceCard";
 const Services = () => {
+  const isDark = useSelector((state) => state.theme.isDark);
+  const bg = isDark ? "bg-black" : "bg-gray-200";
   return (
-    <div className="bg-gray-200 mt-20 pt-10" id="service">
+    <div className={`${bg} pt-10`} id="service">
       <Heading ft="MY" st="services" />
       <div className="grid mt-16 md:mt-20 lg:mt-28 pb-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-[90%] md:w-[85%] lg:w-[80%] mx-auto gap-8">
         <div data-aos="fade-right" data-aos-delay="200">

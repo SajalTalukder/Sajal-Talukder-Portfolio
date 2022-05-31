@@ -1,7 +1,10 @@
 import React from "react";
+import { useSelector } from "react-redux";
 const Footer = () => {
+  const isDark = useSelector((state) => state.theme.isDark);
+  const bg = isDark ? "bg-black" : "bg-blue-900";
   return (
-    <div className="mt-16 bg-blue-900 p-4 text-center">
+    <div className={`pt-16 ${bg} p-4 text-center`}>
       <div className="flex items-center justify-center pt-10 space-x-4">
         <div className="flex hover:-translate-y-[10px] transform  cursor-pointer transition-all duration-300 items-center justify-center w-12 h-12 rounded-full bg-white p-3">
           <img
