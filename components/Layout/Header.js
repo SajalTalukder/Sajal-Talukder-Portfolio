@@ -30,7 +30,7 @@ const Header = () => {
               premium quality work every time
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 mt-10 md:w-[100%] lg:w-[100%] space-x-2 xl:w-[80%] justify-between items-center">
-              <Link href={` https://www.fiverr.com/sajal_talukder`}>
+              <Link href={`https://www.fiverr.com/sajal_talukder`}>
                 <a target="_blank">
                   <button className="bg-sky-600 btn p-3 px-6 flex  items-center  font-bold uppercase rounded-full">
                     <span>

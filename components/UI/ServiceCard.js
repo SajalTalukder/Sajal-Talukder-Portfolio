@@ -18,7 +18,7 @@ const ServiceCard = ({ sImage, nText, cText, details, num, mt }) => {
         {nText} <span className="text-orange-600 textC">{cText}</span>
       </p>
       <p className="mt-5 textD text-gray-600 text-sm">{details}</p>
-      <Link href=" https://www.fiverr.com/sajal_talukder">
+      <Link href={`https://www.fiverr.com/sajal_talukder`}>
         <a target="_blank">
           <button className="btn px-8 py-2 mt-6 bg-purple-700 rounded-full text-white font-semibold">
             Details

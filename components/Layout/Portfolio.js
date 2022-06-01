@@ -42,26 +42,24 @@ const Portfolio = () => {
           autoPlaySpeed={5000}
           keyBoardControl={true}
         >
-          {projects.map((project) => {
+          {projects.map((project, idx) => {
             return (
-              <>
-                <div
-                  key={project.id}
-                  className=" relative  hover:scale-110 mt-10 p-3 transform transition-all duration-300 shadow-gray-600 space-x-6 ml-5 mr-5"
-                >
-                  <Link href={project.live}>
-                    <a target="_blank">
-                      <Image
-                        src={project.heroImage}
-                        alt={project.name}
-                        width={1000}
-                        height={600}
-                        className="cursor-pointer transform  transition duration-400"
-                      />
-                    </a>
-                  </Link>
-                </div>
-              </>
+              <div
+                key={idx}
+                className=" relative  hover:scale-110 mt-10 p-3 transform transition-all duration-300 shadow-gray-600 space-x-6 ml-5 mr-5"
+              >
+                <Link href={project.live}>
+                  <a target="_blank">
+                    <Image
+                      src={project.heroImage}
+                      alt={project.name}
+                      width={1000}
+                      height={600}
+                      className="cursor-pointer transform  transition duration-400"
+                    />
+                  </a>
+                </Link>
+              </div>
             );
           })}
         </Carousel>

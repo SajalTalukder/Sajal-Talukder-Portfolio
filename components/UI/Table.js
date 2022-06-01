@@ -1,6 +1,6 @@
 import React from "react";
 import { CheckCircleIcon, PaperAirplaneIcon } from "@heroicons/react/solid";
-import Link from "react-scroll/modules/components/Link";
+import Link from "next/link";
 const Table = ({ type, price, s1, s2, s3, s4, s5, scale, bg }) => {
   return (
     <div
@@ -40,7 +40,7 @@ const Table = ({ type, price, s1, s2, s3, s4, s5, scale, bg }) => {
         </div>
       </div>
       <div className="text-center mb-10">
-        <Link href=" https://www.fiverr.com/sajal_talukder">
+        <Link href={`https://www.fiverr.com/sajal_talukder`}>
           <a target="_blank">
             <button className="btn flex items-center space-x-2 mx-auto p-3 rounded-full px-6 text-white bg-blue-700">
               <PaperAirplaneIcon className="w-4 h-4 " />
