@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { useSelector } from "react-redux";
 import Heading from "../UI/Heading";
@@ -71,9 +72,13 @@ const Services = () => {
         </div>
       </div>
       <div className="text-center mt-10 pb-12">
-        <button className="btn px-12 font-bold  py-3 rounded-full text-white bg-teal-700">
-          View All
-        </button>
+        <Link href=" https://www.fiverr.com/sajal_talukder">
+          <a target="_blank">
+            <button className="btn px-12 font-bold  py-3 rounded-full text-white bg-teal-700">
+              View All
+            </button>
+          </a>
+        </Link>
       </div>
     </div>
   );

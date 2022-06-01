@@ -9,7 +9,7 @@ const Nav = () => {
   const [showNav, setShowNav] = useState(false);
   const isDark = useSelector((state) => state.theme.isDark);
   const dispatch = useDispatch();
-  const logoText = navSticky || isDark ? "text-white" : "text-black";
+  const logoText = navSticky || isDark ? "text-white" : "lg:text-black";
   const lightHandler = () => {
     dispatch(themeAction.lightMode());
   };

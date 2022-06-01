@@ -2,12 +2,14 @@ import React from "react";
 import Nav from "./Nav";
 import Image from "next/image";
 import { CheckCircleIcon, DownloadIcon } from "@heroicons/react/solid";
+import Link from "next/link";
 import TypeWrite from "../Utils/TypeWrite";
 import { useSelector } from "react-redux";
 const Header = () => {
   const isDark = useSelector((state) => state.theme.isDark);
   const bg = isDark ? "bg-dark" : "bg-1";
   const textColor = isDark ? "text-white" : "text-black";
+
   return (
     <>
       <Nav />
@@ -28,12 +30,16 @@ const Header = () => {
               premium quality work every time
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 mt-10 md:w-[100%] lg:w-[100%] space-x-2 xl:w-[80%] justify-between items-center">
-              <button className="bg-sky-600 btn p-3 px-6 flex  items-center  font-bold uppercase rounded-full">
-                <span>
-                  <CheckCircleIcon className="h-4 w-4 text-white" />
-                </span>
-                <span className=" ml-2">Hire Me</span>
-              </button>
+              <Link href={` https://www.fiverr.com/sajal_talukder`}>
+                <a target="_blank">
+                  <button className="bg-sky-600 btn p-3 px-6 flex  items-center  font-bold uppercase rounded-full">
+                    <span>
+                      <CheckCircleIcon className="h-4 w-4 text-white" />
+                    </span>
+                    <span className=" ml-2">Hire Me</span>
+                  </button>
+                </a>
+              </Link>
             </div>
           </div>
           <div className="relative w-[90%] h-[90%] hidden md:inline-block text-center">

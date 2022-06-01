@@ -65,7 +65,7 @@ const Contact = () => {
                 Email
               </p>
               <p className={`text-sm font-semibold ${textColor2}`}>
-                Sajal01@gmail.com
+                Sajaltalukder01@gmail.com
               </p>
             </div>
           </div>
