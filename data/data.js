@@ -18,8 +18,8 @@ const projects = [
     id: 3,
     name: "Google Docs Clone",
     heroImage: "/images/w2.png",
-    live: "https://google-doc-chi.vercel.app/",
-    github: "https://github.com/SajalTalukder/google-doc",
+    live: "https://sajaldoc.vercel.app/",
+    github: "https://github.com/SajalTalukder/sajaldoc",
   },
   {
     id: 4,
